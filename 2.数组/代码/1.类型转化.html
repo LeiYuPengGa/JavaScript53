@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-   var str = false + 1;
-   document.write(str);
-   var demo = false == 0;
-   document.write(demo);
-   document.write(typeof(b));
-   var a = (+undefined);
-   document.write(typeof(-"hello"));
-   document.write(-null);
+        var str = false + 1;
+        document.write(str);
+        var demo = false == 0;
+        document.write(demo);
+        document.write(typeof (b));
+        var a = (+undefined);
+        document.write(typeof (-"hello"));
+        document.write(-null);
+
+        document.write((window.foo || (window.foo = 'bar')));
+
     </script>
 </body>
+
 </html>

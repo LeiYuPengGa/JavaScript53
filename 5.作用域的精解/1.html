@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a(){
+        }
+        var global = 100;
+        a();
+
+        //a defined a.[[scope]] --> 0: GO{};
+        //a doing  a.[[scope]] --> 0: AO{}  1 : GO{};
+        //
+
+    </script>
+</body>
+</html>
