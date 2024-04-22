@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Person.prototype.sex = '男';         //函数出生时就定义好了
+        Person.prototype.hobby = '玩';
+        //还有另外一种写法:
+        // Person.prototype{
+        // sex = '男';
+        // hobby = '玩';
+        //}
+        function Person(name, height) {
+            this.name = name;
+            this.height = height;
+        }
+        var lyp = new Person('雷雨朋', '175');
+        console.log(lyp.name);
+        console.log(lyp.sex);
+
+        //查原型:
+        console.log('查原型');
+        console.log(Person.prototype.sex);
+        //增加原型:
+        console.log(Person.prototype.learn = 'bad');
+        //修改原型:
+        console.log('改原型');
+        Person.prototype.hobby = '吃喝玩乐';
+        console.log(lyp.hobby);//删除原型:
+
+        //删除原型:
+        delete Person.prototype.learn;
+    </script>
+</body>
+
+</html>

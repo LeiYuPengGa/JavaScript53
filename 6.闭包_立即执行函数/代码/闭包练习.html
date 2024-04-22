@@ -18,6 +18,28 @@
         var demo = a();
         demo();
         demo();
+
+
+     //   练习题2:
+     function Person(name , age , sex ){
+        var a = 0;
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        function sss(){
+            a ++;
+            document.write(a);
+        }
+        this.say = sss;
+        // return this 
+     }
+     var oPerson = new Person();
+     oPerson.say();
+     oPerson.say();
+     var oPerson1 = new Person();
+     oPerson1.say();
+
+     //这个题目考察了既闭包的知识,又考察了对象的知识点
     </script>
 </body>
 </html>

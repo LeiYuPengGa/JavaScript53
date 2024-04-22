@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //对象直接创建法
+        // 创建一个空对象
+        var obj1 = {};
+
+        // 添加属性和方法
+        obj1.name = "John";
+        obj1.age = 30;
+        obj1.sayHello = function () {
+            console.log("Hello, my name is " + this.name + " and I'm " + this.age + " years old.");
+        };
+
+        // 访问属性和调用方法
+        console.log(obj1.name); // 输出: John
+        console.log(obj1.age);  // 输出: 30
+        obj1.sayHello();        // 输出: Hello, my name is John and I'm 30 years old.
+
+
+
+        //这个也是直接定义,只不过是在声明的同时就给赋值了
+        var obj2 = {
+            name: "John",
+            age: 30,
+            sayHello: function () {
+                console.log("Hello, my name is " + this.name + " and I'm " + this.age + " years old.");
+            }
+        };
+
+        console.log(obj2.name); // 输出: John
+        console.log(obj2.age);  // 输出: 30
+        obj2.sayHello();        // 输出: Hello, my name is John and I'm 30 years old.
+
+
+
+
+
+        // 使用系统自带的构造函数创建对象
+        var obj3 = new Object(); // 使用 Object 构造函数创建对象
+        obj3.name = "Alice";
+        obj3.age = 25;
+
+        console.log(obj3.name); // 输出: Alice
+        console.log(obj3.age);  // 输出: 25
+
+
+
+        // 使用自定义的构造函数创建对象
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        var obj4 = new Person("Bob", 30);
+
+        console.log(obj4.name); // 输出: Bob
+        console.log(obj4.age);  // 输出: 30
+
+    </script>
+</body>
+
+</html>

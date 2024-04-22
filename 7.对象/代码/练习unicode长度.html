@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //转化字符串unicode编码长度
+        var str = 'aienbea哈;';
+        function bytesLength(str){
+          var result = str.length;
+          var i = 0;
+         for(i ; i < str.length ; i++)
+         {
+            if(str.charCodeAt(i) > 255){
+               result++;
+            }
+         }
+         return result;
+        }
+        console.log((bytesLength(str)));
+    </script>
+</body>
+</html>
