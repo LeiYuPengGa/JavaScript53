@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 4;
+        num.length = 3;
+        // new Number(4).len =3  delete
+        console.log(num.length);
+        
+        var str = 'abcd';
+        str.length = 2;
+        // new String('abcd').length = 2 delete
+        console.log(str); 
+
+        //new String('abcd').length  这个字符串本来就有这个属性
+        console.log(str.length);
+
+
+        
+        //练习题:
+        var str = 'abc';
+        str += 1;
+        var test = typeof(str);
+        if(test.length == 6)
+        {
+          //  new String(test).sign = 'typeof的返回值结果可能是string'  delete
+            test.sign = 'typeof的返回值结果可能是String';
+        }
+        // new String(test).sign  -> underfined
+        console.log(test.sign);
+    </script>
+</body>
+</html>

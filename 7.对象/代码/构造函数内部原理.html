@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,height){
+            //var this = {}
+            this.name = name;
+            this.height = height;
+            this.say = function (){
+                console.log(this.say);
+            }
+            //return this;
+        }
+        console.log(new Person('小王' , 180).name)
+
+        function Person1(name,height){
+            //var this = {}
+            this.name = name;
+            this.height = height;
+            this.say = function (){
+                console.log(this.say);
+            }
+            return {};  //显示的写一了个空对象
+        }
+
+        var p1 = new Person1('小雷' , 175); //p1 返回空对象
+    </script>
+</body>
+</html>
